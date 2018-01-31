@@ -28,7 +28,7 @@ public class GuestbookController {
 		return "list";
 	}
 	
-	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	@RequestMapping(value = "/write", method = RequestMethod.POST)
 	public String write(@ModelAttribute GuestBookVo guestbookVo) {
 		
 		System.out.println(guestbookVo.toString());
@@ -45,7 +45,7 @@ public class GuestbookController {
 		return "deleteform";
 	}
 	
-	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public String delete(@ModelAttribute GuestBookVo guestbookVo) {
 		
 		guestbookDao.delete(guestbookVo.getNo(), guestbookVo.getPassword());

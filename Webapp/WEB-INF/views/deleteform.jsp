@@ -8,7 +8,7 @@
  <title>Insert title here</title> 
  </head> 
  <body> 
- 	<form action="/guestbook3/delete" method="get"> 
+ 	<form action="/guestbook3/delete" method="post"> 
 	<input type="hidden" name="spring" value="delete"> 
  	<input type='hidden' name="no" value="${param.no}" size="5">
 	<table> 
